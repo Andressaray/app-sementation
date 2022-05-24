@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Bold;
+  src: url('../assets/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Regular;
+  src: url('../assets/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Light;
+  src: url('../assets/Poppins-Light.ttf');
+}
+
+.title{
+  font-family: Bold;
+  font-size: 25px;
+  text-align: center;
+}

@@ -1,0 +1,62 @@
+.label{
+  font-family: Regular;
+}
+.contentTextArea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textarea{
+  font-family: Regular;
+  font-size: 20px;
+  width: 70%;
+  resize: none;
+  height: 320px;
+  border-radius: 20px;
+  border-color: #09f;
+  padding: 20px;
+}
+
+.contentText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: #ff9100; 
+  width: 70%;
+  resize: none;
+  height: 320px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.btn { 
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 10px 60px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #09f;
+  border-radius: 10px;
+}
+
+.btn:hover{
+  transform: scale(1.01);
+}
+
+.text-btn{
+  font-family: Regular;
+  font-size: 15px;
+  color: #fff;
+}

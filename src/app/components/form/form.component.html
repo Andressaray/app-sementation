@@ -1,0 +1,13 @@
+<form [formGroup]="formText" >
+  <div class="contentTextArea">
+    <label for="text" class="label">Ingresa el texto que quieres procesar: </label>
+    <textarea id="text" [formControl]="text" class="textarea" formControlName="text">
+    </textarea>
+    <button class="btn" (click)="handlePress()" type="button">
+      <p class="text-btn">Traducir</p>
+    </button>
+  </div>
+  <div class="contentText"> 
+    {{result}}
+  </div>
+</form>
