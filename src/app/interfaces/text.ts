@@ -2,4 +2,18 @@ interface TextI {
   text: string
 }
 
-export default TextI
+interface BadWordsI {
+  name: string,
+  value: number
+}
+interface JwtText {
+  body: {
+    badWords: BadWordsI[],
+    listWords: string[],
+  }
+}
+
+export {
+  JwtText,
+  TextI
+}
