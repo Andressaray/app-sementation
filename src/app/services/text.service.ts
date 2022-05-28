@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-import { TextI } from '../interfaces/index';
+import { TextI, JwtText } from '../interfaces/index';
 
 @Injectable({
   providedIn: 'root'

@@ -11,7 +11,8 @@ import { TextService } from 'src/app/services/text.service';
 export class FormComponent implements OnInit {
   private subscription: Subscription = new Subscription();
   text = new FormControl('');
-  result: string = ''
+  bagWords: any = []
+  listWords: any = []
   formText = new FormGroup({
     text: new FormControl('', Validators.required),
   });
@@ -29,7 +30,10 @@ export class FormComponent implements OnInit {
       this.textService.transformText(text).subscribe({
         next: (v) => {
           console.log('v', v)
-          this.result = v.text
+          // @ts-ignore
+          this.bagWords = v.body.bagWords
+          // @ts-ignore
+          this.listWords = v.body.listWords
         },
         error: (e) => console.error(e),
         complete: () => {

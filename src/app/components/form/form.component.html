@@ -1,13 +1,54 @@
-<form [formGroup]="formText" >
-  <div class="contentTextArea">
-    <label for="text" class="label">Ingresa el texto que quieres procesar: </label>
-    <textarea id="text" [formControl]="text" class="textarea" formControlName="text">
-    </textarea>
-    <button class="btn" (click)="handlePress()" type="button">
-      <p class="text-btn">Traducir</p>
-    </button>
-  </div>
-  <div class="contentText"> 
-    {{result}}
-  </div>
+<form [formGroup]="formText">
+  <div class="contentAll">
+    <div class="contentTextArea">
+      <div>
+        <label for="text" class="label">Ingresa el texto que quieres procesar: </label>
+        <textarea id="text" [formControl]="text" class="textarea" formControlName="text">
+      </textarea>
+        <button class="btn" (click)="handlePress()" type="button">
+          <p class="text-btn">Traducir</p>
+        </button>
+        </div>
+        <div class="contentTextOut">
+          <label for="text" class="label">Texto procesado: </label>
+          <ul *ngFor="let item of listWords">
+            <li>{{item}}</li>
+          </ul>
+          </div>
+          </div>
+          <div class="contentTable">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-btn">#</th>
+            <th colspan="2" class="text-btn">Palabra</th>
+            <th colspan="2" class="text-btn">#Repeticiones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let word of bagWords | keyvalue; let i = index">
+            <tr>
+              <td class="text-btn">{{i+1}}</td>
+              <td colspan="2" class="text-btn">{{word.key}}</td>
+              <td colspan="2" class="text-btn">{{word.value}}</td>
+            </tr>
+          </ng-container>
+      
+        </tbody>
+      </table>
+      <div class="contentColumn">
+      </div>
+      </div>
+      </div>
+
+  <!-- <div class="footer">
+  
+    <div class="footer-text-left">
+      <a href=""> <img src="./assets/iconoU.png" class="icon-style" alt="Universidad" height="80px" width="120px"></a>
+      <a href="https://aunarvillavicencio.edu.co/" class="menu">Coorporación Universitaria Autónoma de Nariño</a>
+    </div>
+    <div class="footer-content-right">
+      <a href="https://github.com/digitalocean"> <img src="./assets/github.jpeg" class="icon-style" alt="Github"></a>
+    </div>
+  </div> -->
 </form>
